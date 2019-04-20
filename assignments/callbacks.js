@@ -72,12 +72,13 @@ multiplyNums(4,5,function(product){
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
-  return list.includes(item);
+  return cb(list.includes(item));
 }
 
-contains(items,'yo-yo', function(value){
+contains('yo-yo',items, function(value){
   console.log(value);
 })
+
 /* STRETCH PROBLEM */
 
 function removeDuplicates(array, cb) {
