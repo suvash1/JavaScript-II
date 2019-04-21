@@ -88,7 +88,40 @@ console.log(ticketPriceTotal);
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
 // Problem 1
+//Give a brief introduction of every person
+
+let Intro = [];
+runners.forEach(function(element){
+    Intro.push(`My name is ${element.first_name} ${element.last_name}.Call me ${element.company_name}. You can contact me @ ${element.email}`)
+})
+
+console.log(Intro);
 
 // Problem 2
 
+//Calculate the estimated next year Donation increased by 5%
+
+let nextYearDon= [];
+nextyearDon = runners.map(x => x.donation *1.05 )
+
+console.log(nextYearDon)
+
+
+
 // Problem 3
+
+Get the email of the person who donated less than 100
+
+let lessDon = [];
+let lessDonEmail = [];
+
+lessDon = runners.filter(x => x.donation <100);
+lessDon.forEach(word => lessDonEmail.push(word.email));
+
+console.log(lessDonEmail);
+
+
+
+
+
+
